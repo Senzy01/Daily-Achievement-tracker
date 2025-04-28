@@ -1,0 +1,208 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Sections */
+section {
+  margin-bottom: 60px;
+  background: rgba(0, 0, 0, 0.6); /* Transparent black */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cover h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.champion-text {
+  font-style: italic;
+}
+
+.welcome p, .affirmation p, .final-challenge p {
+  margin-top: 10px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Daily Missions */
+.daily-missions h3 {
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}
+
+/* Tracker Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+th {
+  background-color: #007bff;
+}
+
+td button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+td button.completed {
+  background-color: #6c757d;
+}
+
+
+ /* Calendar */
+ .calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  overflow-y: auto; /* Allow vertical scrolling for larger content */
+}
+
+.calendar .day {
+  padding: 15px;
+  background-color: #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.calendar .day.completed {
+  background-color: #28a745;
+}
+
+/* Footer Styling */
+#footer {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for Footer */
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .calendar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+}
+
+.routine-img {
+  width: 100%;
+  max-width: 400px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* Mobile-friendly Layout */
+@media (max-width: 768px) {
+  .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      margin-top: 20px;
+      max-height: 100vh; /* Prevent overflow and ensure scroll if needed */
+      overflow-y: scroll; /* Enable scrolling */
+      scroll-snap-type: y mandatory; /* Snap scrolling for smoothness */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .calendar .day {
+      padding: 12px;
+      background-color: #007bff;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+  }
+
+  .calendar .day.completed {
+      background-color: #28a745;
+  }
+}
+
+/* Desktop Layout (Laptop/Tablet with wider screens) */
+@media (min-width: 769px) {
+  .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+      overflow-x: auto; /* Allow horizontal scrolling if needed */
+  }
+
+  .calendar .day {
+      padding: 15px;
+      background-color: #007bff;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+  }
+
+  .calendar .day.completed {
+      background-color: #28a745;
+    }
+}
